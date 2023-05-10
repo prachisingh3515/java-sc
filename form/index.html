@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        h1{
+            color: white;
+            font-size:70px;
+            text-shadow: 3px 3px 2px forestgreen;
+            font-family: cursive;
+        }
+        h2{
+            color: white;
+            font-size: 30px;
+            font-family: cursive;
+        }
+        button{
+            cursor: pointer;
+            padding: 20px;
+            border-color:rgb(255, 0, 170);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 50%;  
+        }
+        .box{
+            box-shadow: 5px 5px 5px palevioletred;
+        }
+        
+        
+        
+    </style>
+</head>
+<body background="https://i1.wp.com/doctorsofcourage.org/wp-content/uploads/2017/11/computer-blue-opacity-background.jpg?ssl=1">
+    <center><h1>SIGN UP</h1></center>
+    <center><h2>Please enter the required details </h2></center>
+    
+    <form>
+        <center><fieldset style="width:30% ;color: white;">
+            <legend style="color: chartreuse;"><b><h3>NAME</h3></b></legend>
+            <div>
+                
+                FIRST NAME
+                <span style="color: rgba(245,48,48)">*</span>
+            
+                <br>
+                <input  class="box" id="name" required type="text" placeholder="First Name" name="first_name"><br><br>
+                
+                LAST NAME
+                <span style="color: rgba(245,48,48)">*</span>
+                <br> <input class="box" id="name" required type="text" placeholder="Last Name" name="last_name">
+            </div>
+        </fieldset>
+        <br>
+        
+        <center><fieldset style="width:30%;color: white;">
+            <legend style="color: chartreuse;"><b><h3>CONTACT</h3></b></legend>
+            <div>
+                CALLING CODES: <select name="codes">
+                <option value="India" selected="selected">+91</option>
+                <option value="USA">+1</option>
+                <option value="UK">+44</option>
+                <option value="Mexico">+52</option>
+                <option value="China">+86</option>
+                </select>
+            </div>
+            <br>
+            
+            CONTACT NUMBER
+            <span style="color: rgba(245,48,48)">*</span><br>
+            <input class="box" id="phone" required type="number" placeholder="XXXXXXXXXX" name="contact_number">
+            <br><br>
+            Email
+            <span style="color: rgba(245,48,48)">*</span><br>
+            <input class="box" id="email" required type="email" placeholder="Email Id" name="Email">
+            <br>
+        </fieldset>
+        <center><fieldset style="width:30%;color: white;">
+            <legend style="color: chartreuse;"><b><h3>PASSWORD</h3></b></legend>
+            
+            PASSWORD
+            <span style="color: rgba(245,48,48)">*</span><br>
+            <input class="box" id="pwd" required type="text" placeholder="Password" name="password">
+            <br>
+           
+        </fieldset>
+       <center><fieldset style="width:30%;color: white;">
+            <legend style="color: chartreuse;"><b><h3>TERMS AND CONDITIONS</h3></b></legend>
+            <div class="rating">
+                
+                
+                 <input required type="radio" name="T&C"> I agree to the given terms and conditions      
+                
+            
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <center><button id="submit" type="submit">Submit</button></center>
+        </div>
+    </form>
+    <script>
+        function alrt(){
+            //Validating name
+            const nameinput=document.getElementById("name")
+            if(nameinput.value==""){
+                alert("Name can't be empty")
+            }
+            else{
+                console.log(nameinput.value)
+            }
+            //validating phone
+            const phoneinput=document.getElementById("phone")
+            if(phone.value.length==10){
+                console.log(phoneinput.value)
+            }
+            else{
+                
+                alert("Please enter a valid phone number")
+            }
+            //validating password
+            const pwdinput=document.getElementById("pwd")
+            if (pwd.value.length<8){
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter and one numeric digit")
+            }
+            if (pwd.value.match[A-Z]){
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter and one numeric digit")
+            }
+            if (pwd.value.match[0-9]){
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter and one numeric digit")
+            }
+            else{
+                console.log(pwdinput.value)
+            }
+         
+        }
+        const button=document.getElementById("submit")
+        button.addEventListener("click",alrt)
+        
+        
+    
+    </script>
+    
+</body>
+</html>
